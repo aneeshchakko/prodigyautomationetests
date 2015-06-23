@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://selenium.googlecode.com/" />
+<title>Existing Teacher</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Existing Teacher</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>https://www.prodigygame.com</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=login-link</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=login-username</td>
+	<td>aneesh.chakko+poweruser@prodigygame.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=login-password</td>
+	<td>test</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//form[@id='login-form']/div[2]/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Prodigy Math Game</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=My Students</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Prodigy Math Game</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=span.button-title-small</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=choices-option-0</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=class-create-first-1</td>
+	<td>Automation</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=class-create-last-1</td>
+	<td>Student</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=class-create-submit</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=class-create-close-final</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Prodigy Math Game</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Assignments</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Prodigy Math Game</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>id=create-new-assignment-button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Prodigy Game | Assignments</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Classify 2D shapes</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@type='submit']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='modals']/div[3]/div[2]/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='modals']/div[3]/div[2]/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Prodigy Math Game</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Reports</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Prodigy Math Game</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Membership</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Become a Prodigy Member | Prodigy Game</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=buy-init-monthly</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//button[@type='button']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='purchase-step-container']/section/div[2]/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing-card-number-field</td>
+	<td>4147202120026297</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing-postal-code-field</td>
+	<td>L7S1E2</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=billing-card-month-exp-field</td>
+	<td>label=01</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=billing-card-year-exp-field</td>
+	<td>label=19</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=billing-card-cvc-field</td>
+	<td>429</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='purchase-step-container']/section/div[2]/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>3000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='purchase-step-container']/section/div[2]/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>10000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@id='modals']/div[3]/div[2]/div/button</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=My Students</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Prodigy Math Game</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//div[@id='manage-students']/div/a[5]/span</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Prodigy Math Game</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Logout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertTitle</td>
+	<td>Prodigy Math Game - Learn Math for Free. Forever.</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
