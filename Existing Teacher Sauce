@@ -1,0 +1,122 @@
+package com.example.tests;
+
+import java.util.regex.Pattern;
+import java.util.concurrent.TimeUnit;
+import org.junit.*;
+import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class ExistingTeacherSauce {
+  private WebDriver driver;
+  private String baseUrl;
+  private boolean acceptNextAlert = true;
+  private StringBuffer verificationErrors = new StringBuffer();
+
+  @Before
+  public void setUp() throws Exception {
+    driver = new FirefoxDriver();
+    baseUrl = "http://selenium.googlecode.com/";
+    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  }
+
+  @Test
+  public void testExistingTeacherSauce() throws Exception {
+    driver.get("https://www.prodigygame.com");
+    driver.findElement(By.id("login-link")).click();
+    driver.findElement(By.id("login-username")).clear();
+    driver.findElement(By.id("login-username")).sendKeys("aneesh.chakko+poweruser@prodigygame.com");
+    driver.findElement(By.id("login-password")).clear();
+    driver.findElement(By.id("login-password")).sendKeys("test");
+    driver.findElement(By.xpath("//form[@id='login-form']/div[2]/button")).click();
+    assertEquals("Prodigy Math Game", driver.getTitle());
+    driver.findElement(By.linkText("My Students")).click();
+    assertEquals("Prodigy Math Game", driver.getTitle());
+    driver.findElement(By.cssSelector("span.button-title-small")).click();
+    driver.findElement(By.id("choices-option-0")).click();
+    driver.findElement(By.id("class-create-first-1")).clear();
+    driver.findElement(By.id("class-create-first-1")).sendKeys("Automation");
+    driver.findElement(By.id("class-create-last-1")).clear();
+    driver.findElement(By.id("class-create-last-1")).sendKeys("Student");
+    driver.findElement(By.id("class-create-submit")).click();
+    driver.findElement(By.id("class-create-close-final")).click();
+    assertEquals("Prodigy Math Game", driver.getTitle());
+    driver.findElement(By.linkText("Assignments")).click();
+    assertEquals("Prodigy Math Game", driver.getTitle());
+    driver.findElement(By.id("create-new-assignment-button")).click();
+    assertEquals("Prodigy Game | Assignments", driver.getTitle());
+    driver.findElement(By.linkText("Classify 2D shapes")).click();
+    driver.findElement(By.xpath("//button[@type='submit']")).click();
+    driver.findElement(By.xpath("//div[@id='modals']/div[3]/div[2]/div/button")).click();
+    driver.findElement(By.xpath("//div[@id='modals']/div[3]/div[2]/div/button")).click();
+    assertEquals("Prodigy Math Game", driver.getTitle());
+    driver.findElement(By.linkText("Reports")).click();
+    assertEquals("Prodigy Math Game", driver.getTitle());
+    driver.findElement(By.linkText("Membership")).click();
+    assertEquals("Become a Prodigy Member | Prodigy Game", driver.getTitle());
+    driver.findElement(By.id("buy-init-monthly")).click();
+    driver.findElement(By.xpath("//button[@type='button']")).click();
+    driver.findElement(By.xpath("//div[@id='purchase-step-container']/section/div[2]/div/button")).click();
+    driver.findElement(By.id("billing-card-number-field")).clear();
+    driver.findElement(By.id("billing-card-number-field")).sendKeys("4147202120026297");
+    driver.findElement(By.id("billing-postal-code-field")).clear();
+    driver.findElement(By.id("billing-postal-code-field")).sendKeys("L7S1E2");
+    new Select(driver.findElement(By.id("billing-card-month-exp-field"))).selectByVisibleText("01");
+    new Select(driver.findElement(By.id("billing-card-year-exp-field"))).selectByVisibleText("19");
+    driver.findElement(By.id("billing-card-cvc-field")).clear();
+    driver.findElement(By.id("billing-card-cvc-field")).sendKeys("429");
+    driver.findElement(By.xpath("//div[@id='purchase-step-container']/section/div[2]/div/button")).click();
+    driver.findElement(By.xpath("//div[@id='purchase-step-container']/section/div[2]/div/button")).click();
+    driver.findElement(By.xpath("//div[@id='modals']/div[3]/div[2]/div/button")).click();
+    driver.findElement(By.linkText("My Students")).click();
+    assertEquals("Prodigy Math Game", driver.getTitle());
+    driver.findElement(By.xpath("//div[@id='manage-students']/div/a[5]/span")).click();
+    assertEquals("Prodigy Math Game", driver.getTitle());
+    driver.findElement(By.linkText("Logout")).click();
+    assertEquals("Prodigy Math Game - Learn Math for Free. Forever.", driver.getTitle());
+  }
+
+  @After
+  public void tearDown() throws Exception {
+    driver.quit();
+    String verificationErrorString = verificationErrors.toString();
+    if (!"".equals(verificationErrorString)) {
+      fail(verificationErrorString);
+    }
+  }
+
+  private boolean isElementPresent(By by) {
+    try {
+      driver.findElement(by);
+      return true;
+    } catch (NoSuchElementException e) {
+      return false;
+    }
+  }
+
+  private boolean isAlertPresent() {
+    try {
+      driver.switchTo().alert();
+      return true;
+    } catch (NoAlertPresentException e) {
+      return false;
+    }
+  }
+
+  private String closeAlertAndGetItsText() {
+    try {
+      Alert alert = driver.switchTo().alert();
+      String alertText = alert.getText();
+      if (acceptNextAlert) {
+        alert.accept();
+      } else {
+        alert.dismiss();
+      }
+      return alertText;
+    } finally {
+      acceptNextAlert = true;
+    }
+  }
+}
