@@ -1,0 +1,166 @@
+Existing Teacher
+open
+https://www.prodigygame.com
+
+click
+id=login-link
+
+type
+id=login-username
+aneesh.chakko+poweruser@prodigygame.com
+type
+id=login-password
+test
+clickAndWait
+//form[@id='login-form']/div[2]/button
+
+assertTitle
+Prodigy Math Game
+
+clickAndWait
+link=My Students
+
+assertTitle
+Prodigy Math Game
+
+click
+css=span.button-title-small
+
+pause
+3000
+
+click
+id=choices-option-0
+
+pause
+3000
+
+type
+id=class-create-first-1
+Automation
+type
+id=class-create-last-1
+Student
+click
+id=class-create-submit
+
+pause
+3000
+
+clickAndWait
+id=class-create-close-final
+
+assertTitle
+Prodigy Math Game
+
+clickAndWait
+link=Assignments
+
+assertTitle
+Prodigy Math Game
+
+pause
+3000
+
+clickAndWait
+id=create-new-assignment-button
+
+assertTitle
+Prodigy Game | Assignments
+
+pause
+3000
+
+click
+link=Classify 2D shapes
+
+pause
+3000
+
+click
+//button[@type='submit']
+
+click
+//div[@id='modals']/div[3]/div[2]/div/button
+
+pause
+3000
+
+clickAndWait
+//div[@id='modals']/div[3]/div[2]/div/button
+
+assertTitle
+Prodigy Math Game
+
+clickAndWait
+link=Reports
+
+assertTitle
+Prodigy Math Game
+
+clickAndWait
+link=Membership
+
+assertTitle
+Become a Prodigy Member | Prodigy Game
+
+click
+id=buy-init-monthly
+
+pause
+3000
+
+click
+//button[@type='button']
+
+click
+//div[@id='purchase-step-container']/section/div[2]/div/button
+
+type
+id=billing-card-number-field
+4147202120026297
+type
+id=billing-postal-code-field
+L7S1E2
+select
+id=billing-card-month-exp-field
+label=01
+select
+id=billing-card-year-exp-field
+label=19
+type
+id=billing-card-cvc-field
+429
+click
+//div[@id='purchase-step-container']/section/div[2]/div/button
+
+pause
+3000
+
+click
+//div[@id='purchase-step-container']/section/div[2]/div/button
+
+pause
+10000
+
+click
+//div[@id='modals']/div[3]/div[2]/div/button
+
+clickAndWait
+link=My Students
+
+assertTitle
+Prodigy Math Game
+
+clickAndWait
+//div[@id='manage-students']/div/a[5]/span
+
+assertTitle
+Prodigy Math Game
+
+clickAndWait
+link=Logout
+
+assertTitle
+Prodigy Math Game - Learn Math for Free. Forever.
+
