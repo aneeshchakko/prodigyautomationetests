@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head profile="http://selenium-ide.openqa.org/profiles/test-case">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="selenium.base" href="http://selenium.googlecode.com/" />
+    <title>Existing Teacher New Student</title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <td colspan="3">Existing Teacher New Student</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>open</td>
+          <td>https://www.prodigygame.com/</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>click</td>
+          <td>login-link</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>type</td>
+          <td>login-username</td>
+          <td>aneesh.chakko+poweruser@prodigygame.com</td>
+        </tr>
+        <tr>
+          <td>type</td>
+          <td>login-password</td>
+          <td>test</td>
+        </tr>
+        <tr>
+          <td>click</td>
+          <td>//form[@id='login-form']//button[.='Login']</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>click</td>
+          <td>//header[@id='main-header']//a[.=' My Students']</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>click</td>
+          <td>//div[@id='manage-students']//span[.='Add Students']</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>click</td>
+          <td>//div[@id='choices-options']//button[.='Create New Students']</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>type</td>
+          <td>class-create-first-1</td>
+          <td>Alex</td>
+        </tr>
+        <tr>
+          <td>type</td>
+          <td>class-create-last-1</td>
+          <td>Prodigy</td>
+        </tr>
+        <tr>
+          <td>click</td>
+          <td>//div[@id='class-create-entry']//button[.='Create Students']</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>pause</td>
+          <td>3000</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>click</td>
+          <td>//div[@id='class-create-complete-actions']//button[.='Close']</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>verifyTextPresent</td>
+          <td>Alex Prodigy</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
